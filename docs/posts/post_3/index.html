@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>🧡 HTML | Buenas practicas - Bitácora de Viaje de Ricardo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://richirrim.github.io/my_launchx_blog/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="../../css/style.min.4f4767d518839223786999cdb69fc7a63791220ecccd236bc732a5f998aaee2d.css">
+  
+
+  
+    <meta name="description" content="Conjunto de buenas practicas para ecribir codigo html más limpio, consistente y ordenado."/>
+    <meta property="og:title" content="🧡 HTML | Buenas practicas"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://richirrim.github.io/my_launchx_blog/posts/post_3/"/>
+    
+    <meta property="og:description" content="Conjunto de buenas practicas para ecribir codigo html más limpio, consistente y ordenado."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ryszardriich"/>
+    <meta name="twitter:creator" content="@ryszardriich"/>
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="https://richirrim.github.io/my_launchx_blog/">Bitácora de Viaje de Ricardo</a>
+  <div class="menu-main">
+    <ul>
+        
+        
+            <li class="menu-item-me">
+                <a href="../../pages/about/">Me</a>
+            </li>
+        
+            <li class="menu-item-posts">
+                <a href="../../posts/">Posts</a>
+            </li>
+        
+    </ul>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>🧡 HTML | Buenas practicas<span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <p>📷 <a href="https://www.instagram.com/richirrim/">Instagram | Ricardo Ortega</a> para encontrar más contenido.</p>
+<p>Recuerden que muchas de estas convenciones su uso o como la usen va depender de la empresa en la que estés trabajando, el proyecto, el equipo, etc. Y como dije antes su uso puede variar de proyecto en proyecto. Esta es una pequeña guia, es solo una probadita del clean code, así que ya puedes empezar a cosntruir proyectos más limpios, consistentes y escalables 👊🤠.</p>
+<h2 id="buenas-practicas-de-accesibilidad">Buenas practicas de accesibilidad</h2>
+<p>Los siguientes atributos no modifican en nada el resultado final que se mostrara en el navegador, pero para él al navegador le importa y mucho que los uses por temas de accesibilidad y además es una buena práctica usarlos.</p>
+<p>Es decir, no son utilizados solo para darle más información o semántica al navegador, también hay que tener en cuenta que hay usuarios que sufren algún tipo de discapacidad auditiva o visual y estos utilizan navegadores especiales y gracias a los atributos como <code>alt</code> ayudaras a los usuarios con alguna discapacidad a saber que su puntero está sobre una imagen y que tiene que ver con algún animal por ejemplo.</p>
+<h3 id="atributo-alt">Atributo alt=&quot;&quot;</h3>
+<p>En este caso el contendido o el valor del <code>alt</code> debe ser una descripción breve de las imagen a mostrar.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- BAD ❌ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/img/logo.png&#34;</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- GOOD ✅ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/img/logo.png&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Soy el logo de esta web&#34;</span><span class="p">&gt;</span> 
+</code></pre></div><h3 id="atributo-title">Atributo title=&quot;&quot;</h3>
+<p>El valor o contenido del atributo <code>title</code> debe ser una descripción breve de a donde lleva el enlace que tengas pensado usar en tu web.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- BAD ❌ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;twitch.tv/ryszardriich&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- GOOD ✅ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;twitch.tv/ryszardriich&#34;</span> 
+   <span class="na">title</span><span class="o">=</span><span class="s">&#34;Este enlace te lleva a mi canal de twitch: ryszardriich&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="buenas-practica-de-legibilidad">Buenas practica de legibilidad</h2>
+<p>Este pequeño detallito de escribir todas las etiquetas en minúscula, créeme ayuda mucho a la hora de leer el html para ti y también todo tu equipo. Y si vas escribir todo en minúsculas no se te ocurra que es buena idea mezclar mayúsculas con minúsculas, porque no lo es, es mala practica.</p>
+<h3 id="etiquetas-html-atributos-y-valores-siempre-en-minúsculas">Etiquetas html, atributos y valores siempre en minúsculas</h3>
+<p>Obviamente si escribes mayúsculas o mezclas minúsculas con mayúsculas no veras ningún error, el navegador no se va a quejar, todo funcionara pero no esta chido hacerlo se coherente con tu código.</p>
+<p>Recuerda la frase <code>'Que puedas hacerlo, no significa que debes hacerlo o que sea correcto'</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- BAD ❌ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">DIV</span> <span class="na">CLASS</span><span class="o">=</span><span class="s">&#34;GOLAAAAAA&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- VERY, VERY BAD ❌ --&gt;</span>	
+<span class="p">&lt;</span><span class="nt">DIV</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;color&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
+	
+<span class="c">&lt;!-- GOOD ✅ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">clas</span><span class="o">=</span><span class="s">&#34;color&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="usa-siempre-comentarios">Usa siempre comentarios</h3>
+<p>Es una buena practica poner comentarios para poder visualizar rápidamente las secciones de tu html y también para saber donde está cada componente.</p>
+<p><em>Example</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!---------- Header principal | Section ------------&gt;</span>
+<span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;main-header&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container  horizontal-align&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;horizontal-align&#34;</span><span class="p">&gt;</span>
+      <span class="c">&lt;!---------- Logo | Component ---------------&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;logo-link&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Logo de Facebook&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;logo&#34;</span> <span class="na">witdh</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/images/logo-facebook.png&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Logo de la página&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+      <span class="c">&lt;!----------- User | Component --------------&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;user&gt;...&lt;/div&gt;
+</span><span class="s">      &lt;button class=&#34;</span><span class="na">new-post__button</span><span class="err">&#34;</span><span class="p">&gt;</span>Post<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="buenas-practicas-al-usar-atributos-booleanos">Buenas practicas al usar atributos booleanos</h2>
+<p>Es una buena practica no poner el valor al hacer uso de un atributo booleano.</p>
+<p>Atributos booleanos:</p>
+<ul>
+<li>checked</li>
+<li>selected</li>
+<li>disabled</li>
+</ul>
+<p><strong>Example 1</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- BAD ❌ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">disabled</span><span class="o">=</span><span class="s">&#34;disabled&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- GOOD ✅ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">disabled</span><span class="p">&gt;&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
+</code></pre></div><p><strong>Example 2</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- BAD ❌ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">checked</span><span class="o">=</span><span class="s">&#34;checked&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- GOOD ✅ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">checked</span><span class="p">&gt;&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="agregar-un-tamaño-fijo-a-las-imagenes">Agregar un tamaño fijo a las imagenes</h2>
+<p>Es muy buena practica siempre añadir tamaños fijo por defecto a las imagines agregando los atributos <code>witdh</code> y <code>hight</code>. Ojo, nos es necesario agregar el valor dentro de los atributos, es decir, no es necesario poner em, px, etc.</p>
+<p>Por que? por temas de que si por alguna razón no carga la imagen, no se desmaquete el Layout. Es decir, Si no pones el tamaño fijo y la imagen no carga el espacio que ocupaba en el Layout no sera el mismo que si hubiera cargado con normalidad y, por ende, todo el layout se puede mover y no queremos eso verdad.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- BAD ❌ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/images/barry-profile.jpg&#34;</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- GOOD ✅ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/images/barry-profile.jpg&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">hight</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;</span>
+</code></pre></div><p>Les dejo algunas guías de estilo más completas:</p>
+<ul>
+<li><a href="https://google.github.io/styleguide/htmlcssguide.html">Google HTML/CSS Style Guide</a></li>
+<li><a href="https://www.kikopalomares.com/blog/la-guia-de-estilo-en-html">La Guía de Estilo en HTML que deberías de seguir para tener un Código Limpio</a></li>
+</ul>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-twitter">
+        <a href="https://twitter.com/ryszardriich" title="twitter" target="_blank" rel="noopener">
+          <img src="../../images/social/twitter.svg" width="24" height="24" alt="twitter"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/richirrim" title="github" target="_blank" rel="noopener">
+          <img src="../../images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="../../js/bundle.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+</html>
