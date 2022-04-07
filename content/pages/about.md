@@ -2,7 +2,7 @@
 title: 'About me'
 menu:
   main:
-    name: "Yo Merengues"
+    name: "Sobre me"
 ---
 
 ## Who am I
