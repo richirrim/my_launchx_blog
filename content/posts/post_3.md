@@ -1,5 +1,5 @@
 ---
-title: "🧡 HTML | Buenas practicas"
+title: "Html | Buenas prácticas"
 date: 2022-04-07
 description: 'Conjunto de buenas practicas para ecribir codigo html más limpio, consistente y ordenado.'
 ---
