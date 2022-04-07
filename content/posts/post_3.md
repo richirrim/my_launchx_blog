@@ -127,3 +127,7 @@ Por que? por temas de que si por alguna razón no carga la imagen, no se desmaqu
 Les dejo algunas guías de estilo más completas:
 - [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
 - [La Guía de Estilo en HTML que deberías de seguir para tener un Código Limpio](https://www.kikopalomares.com/blog/la-guia-de-estilo-en-html)
+
+
+# MAY THE *DEMO EFFECT* BE WITH YOU
+ Si encontraste útil este 🚀post, 🔗compártelo con todo los 👤terricolas del planeta🌎tierra y no olvides seguirme en [instagram](https://www.instagram.com/richirrim/) para más.
