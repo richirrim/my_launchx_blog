@@ -2,20 +2,15 @@
 title: 'About me'
 menu:
   main:
-    name: "AboutMe"
+    name: "Yo Merengues"
 ---
 
 ## Who am I
 
 Hola, aquí vas a leer un poco sobre mi 🤩
 
-> Excidit gente, si orat suo quaeque dura Calydon nata? Pars auro post stetit
-> adfusique imis amplexus. Agmina per fabricator
-> mittere Erymanthon habetque tot.
+> El fracaso no es una razón para abandonar
+> algo en lo que realmente crees.
 
-**Cineres Nile ipsa** origine discurrunt adest Unde, et quem clausus, imo,
-virens quoque tales, potuit. Ingentes insilit corpore nutricis praebebat roganti
-licuit. Denique a vestros adulantum in bella lina parte et arte generi di igitur
-quis, digitis pedes. Cum resonant tamen, namque in anxia. Non nostri trahens
-ancora.
+Soy egresado de la carrera de Ing. Informática 🎉 . Durante la carrera despertó en mi una enorme curiosidad por el Desarrollo Frontend y desde ese día nunca he parado de aprender, todos los dias descubro algo nuevo y eso me facina. Nunca me limite a un salón de clases para aprender cosas o a un maestro. Algo que también disfruto mucho y que me hace sentir increíble es compartir mi conocimiento con la comunidad como **si fuera una charla de amigos**.
 
