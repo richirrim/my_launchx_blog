@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://richirrim.github.io/my_launchx_blog/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Cómo instalar Hugo en Windows</title>
+      <link>https://richirrim.github.io/my_launchx_blog/posts/como-instalar-hugo-en-windows-linux-wsl/</link>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://richirrim.github.io/my_launchx_blog/posts/como-instalar-hugo-en-windows-linux-wsl/</guid>
+      <description>Hugo es un fast Framework para crear sitios web estáticos y está hecho en Go! . Ojo, para usarlo no necesitas instalar Go!, tranqui, ntp, no es necesario la instalación. Con su increíble velocidad y flexibilidad, Hugo hace que la construcción de sitios web sea divertida nuevamente.
+Hugo lo puedes instalar en los sig. Sistemas Operativos:
+ macOs Windows Linux OpenBSD FreeBSD  Y en cualquier otra PC donde se pueda instalar y ejecutar sin problemas Go!</description>
+    </item>
+    
+    <item>
       <title>Html | Buenas prácticas</title>
       <link>https://richirrim.github.io/my_launchx_blog/posts/html-best-practices/</link>
       <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
