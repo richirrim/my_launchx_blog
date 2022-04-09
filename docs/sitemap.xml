@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://richirrim.github.io/my_launchx_blog/posts/como-instalar-hugo-en-windows-linux-wsl/</loc>
-    <lastmod>2022-04-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://richirrim.github.io/my_launchx_blog/</loc>
+    <lastmod>2022-04-09T17:54:59-05:00</lastmod>
+  </url><url>
+    <loc>https://richirrim.github.io/my_launchx_blog/posts/objetos-en-vanilla-js-y-como-crealos/</loc>
+    <lastmod>2022-04-09T17:54:59-05:00</lastmod>
+  </url><url>
+    <loc>https://richirrim.github.io/my_launchx_blog/posts/como-instalar-hugo-en-windows-linux-wsl/</loc>
     <lastmod>2022-04-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://richirrim.github.io/my_launchx_blog/posts/html-best-practices/</loc>
