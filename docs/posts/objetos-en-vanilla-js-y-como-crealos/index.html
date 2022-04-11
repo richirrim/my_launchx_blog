@@ -64,6 +64,55 @@ en clases</strong> pero claro que podemos implementar la programación orientada
 <p>JS es un lenguaje <strong>Orientado a Objetos basado en Prototypes</strong> y no en
 clases como en otros lenguajes.</p>
 <p>⚠️Contenido cool en construcción&hellip;</p>
+<p>Ojo 👀, un constructor es una forma especial que crea o unicializa un objeto, es
+la versión de JavaScript de una clase. En JavaScript, se llama a un constructor
+cuando se crea un objeto usando la new palabra clave.</p>
+<p>En otras palabras, el operador new utilizado junto a una función de JavaScript es
+lo que nos permite obtener un objeto constructor o función
+constructora.</p>
+<h2 id="creación-de-objetos-vacios-usando-el-constructor-object">Creación de objetos vacios usando el constructor Object()</h2>
+<p>new Object() crea un objeto vacío, un envoltorio.</p>
+<h3 id="cración-del-objeto">Cración del objeto</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="kd">let</span> <span class="nx">ninjaItachi</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
+</code></pre></div><h3 id="agregando-propiedades-al-objeto-vacío">Agregando propiedades al objeto vacío.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Itachi Uchiha&#39;</span><span class="p">;</span>
+<span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">clan</span> <span class="o">=</span> <span class="s1">&#39;Uchiha&#39;</span><span class="p">;</span>
+<span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">currentAge</span> <span class="o">=</span> <span class="mi">21</span><span class="p">;</span>
+<span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">isAlive</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">skillsUnique</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div><h3 id="agregando-métodos">Agregando métodos</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">info</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="sb">`
+</span><span class="sb">        NINJA, </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span><span class="si">}</span><span class="sb">
+</span><span class="sb">        </span><span class="si">${</span><span class="s1">&#39;------&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="si">}</span><span class="sb">
+</span><span class="sb">        Clan: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">clan</span><span class="si">}</span><span class="sb">
+</span><span class="sb">        Edad Actual: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">currentAge</span><span class="si">}</span><span class="sb">
+</span><span class="sb">        Habilidades unicas: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">skillsUnique</span><span class="p">.</span><span class="nx">length</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">skillsUnique</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; | &#39;</span><span class="p">)</span> <span class="o">:</span> <span class="s1">&#39;Nope&#39;</span><span class="si">}</span><span class="sb">
+</span><span class="sb">    `</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">info</span><span class="p">())</span>
+</code></pre></div><h2 id="creación-de-objetos-usando-una-función-constructura">Creación de objetos usando una función constructura</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="kd">function</span> <span class="nx">ninjaNaruto</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Naruto Uzumaki&#39;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">clan</span> <span class="o">=</span> <span class="s1">&#39;Uzumaki&#39;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">currentAge</span> <span class="o">=</span> <span class="s1">&#39;32&#39;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">isAlive</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">skillsUnique</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Detección de sentimiento negativos&#39;</span><span class="p">,</span> <span class="s1">&#39;Flotar&#39;</span><span class="p">,</span> <span class="s1">&#39;Regeneración&#39;</span><span class="p">]</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">info</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+       
+        <span class="k">return</span> <span class="sb">`
+</span><span class="sb">            NINJA, </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span><span class="si">}</span><span class="sb">
+</span><span class="sb">            </span><span class="si">${</span><span class="s1">&#39;------&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="si">}</span><span class="sb">
+</span><span class="sb">            Clan: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">clan</span><span class="si">}</span><span class="sb">
+</span><span class="sb">            Edad Actual: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">currentAge</span><span class="si">}</span><span class="sb">
+</span><span class="sb">            Habilidades unicas: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">skillsUnique</span><span class="p">.</span><span class="nx">length</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">skillsUnique</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; | &#39;</span><span class="p">)</span> <span class="o">:</span> <span class="s1">&#39;Nope&#39;</span><span class="si">}</span><span class="sb">
+</span><span class="sb">        `</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kr">const</span> <span class="nx">naruto</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ninjaNaruto</span><span class="p">()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">naruto</span><span class="p">.</span><span class="nx">info</span><span class="p">())</span>
+</code></pre></div><h2 id="creación-de-objetos-usando-la-forma-literal">Creación de objetos usando la forma literal</h2>
 
     </div>
   </div>
