@@ -6,7 +6,16 @@
     <description>Recent content in Launch X Bitácora de viaje on Bitácora de Viaje de Ricardo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://richirrim.github.io/my_launchx_blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Apr 2022 17:54:59 -0500</lastBuildDate><atom:link href="https://richirrim.github.io/my_launchx_blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Objetos en Vanilla Js y cómo crealos</title>
+      <link>https://richirrim.github.io/my_launchx_blog/posts/objetos-en-vanilla-js-y-como-crealos/</link>
+      <pubDate>Sat, 09 Apr 2022 17:54:59 -0500</pubDate>
+      
+      <guid>https://richirrim.github.io/my_launchx_blog/posts/objetos-en-vanilla-js-y-como-crealos/</guid>
+      <description>Antes de empezar es necesario mencionar que Vanilla JavaScript (JS) no es un lenguaje basado en clases pero claro que podemos implementar la programación orientada a objetos (POO). JS es un poco rebelde y no le gusta hacer las cosas como a sus demás compañeros, por ende, la forma de implementar POO en este lenguaje no es igual a tu lenguaje favorito Orientado a Objetos. JS trabaja de una manera muy peculiar y a su manera implementa POO usando algo llamado Prototipos y para las clases usa algo llamado funciones constructuras pero tranki que todo lo miraremos con mucha calma para que quede claro.</description>
+    </item>
+    
     <item>
       <title>Cómo instalar Hugo en Windows</title>
       <link>https://richirrim.github.io/my_launchx_blog/posts/como-instalar-hugo-en-windows-linux-wsl/</link>
