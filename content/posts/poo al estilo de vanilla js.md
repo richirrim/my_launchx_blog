@@ -20,3 +20,5 @@ cuando se crea un objeto usando la new palabra clave.
 En otras palabras, el operador new utilizado junto a una función de JavaScript es 
 lo que nos permite obtener un objeto constructor o función 
 constructora.
+
+## **⚠️Contenido cool en construcción…**
