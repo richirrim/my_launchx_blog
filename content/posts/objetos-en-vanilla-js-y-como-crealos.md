@@ -5,6 +5,7 @@ description: 'Aprenderas las diferentes y retorcidas formas de crear objetos en 
 image: ''
 draft: false
 ---
+## *⚠️Contenido cool en construcción...*
 
 📦 La forma más simple de crear objetos en Vanilla JavaScript (JS) es usando la forma literal pero no está de más mencionar que la creación de objetos en Programación Orientada a Objetos (POO), JS lo hace a su estilo. Y muy rapidamente te darás cuenta en este post y próximos a lo que me refiero cuando digo que "a su estilo" y sera aun más obvio si ya has implementado ese paradigma en otros lenguajes como Python, PHP o Java.
  
@@ -75,5 +76,3 @@ function ninjaNaruto() {
 const naruto = new ninjaNaruto()
 console.log(naruto.info())
 ``` 
-
-⚠️Contenido cool en construcción...
