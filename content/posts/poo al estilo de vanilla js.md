@@ -3,7 +3,7 @@ title: "POO al estilo Vanilla Js"
 date: 2022-04-13T17:41:42-05:00
 description: 'Introducción a la Programación Orientada Objeto al estilo de Vanilla Javascript'
 image: images/cctv.jpeg
-draft: true
+draft: false
 ---
 
 Antes de empezar es necesario mencionar que **Vanilla JavaScript (JS) no es un lenguaje basado 
