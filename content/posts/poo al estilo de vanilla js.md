@@ -2,7 +2,7 @@
 title: "POO al estilo Vanilla Js"
 date: 2022-04-13T17:41:42-05:00
 description: 'Introducción a la Programación Orientada Objeto al estilo de Vanilla Javascript'
-image: images/cctv.jpeg
+image: ''
 draft: true
 ---
 
@@ -20,3 +20,5 @@ cuando se crea un objeto usando la new palabra clave.
 En otras palabras, el operador new utilizado junto a una función de JavaScript es 
 lo que nos permite obtener un objeto constructor o función 
 constructora.
+
+## **⚠️Contenido cool en construcción…**

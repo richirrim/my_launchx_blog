@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Objetos en Vanilla Js y cómo crealos - Bitácora de Viaje de Ricardo</title>
+  <title>Objetos en Vanilla Js y Cómo crealos - Bitácora de Viaje de Ricardo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="https://richirrim.github.io/my_launchx_blog/favicon.png">
 
@@ -55,25 +55,27 @@
   <div class="blog">
     
     <div class="intro">
-      <h1>Objetos en Vanilla Js y cómo crealos<span class="dot">.</span></h1>
+      <h1>Objetos en Vanilla Js y Cómo crealos<span class="dot">.</span></h1>
       
     </div>
     <div class="content">
-      <p>Antes de empezar es necesario mencionar que <strong>Vanilla JavaScript (JS) no es un lenguaje basado
-en clases</strong> pero claro que podemos implementar la programación orientada a objetos (POO). JS es un poco rebelde y no le gusta hacer las cosas como a sus demás compañeros, por ende, la forma de implementar POO en este lenguaje no es igual  a tu lenguaje favorito Orientado a Objetos. JS trabaja de una manera muy peculiar y a su manera implementa POO usando algo llamado <em>Prototipos</em> y para las <em>clases</em> usa algo llamado <em>funciones constructuras</em> pero tranki que todo lo miraremos con mucha calma para que quede claro.</p>
-<p>JS es un lenguaje <strong>Orientado a Objetos basado en Prototypes</strong> y no en
-clases como en otros lenguajes.</p>
-<p>⚠️Contenido cool en construcción&hellip;</p>
-<p>Ojo 👀, un constructor es una forma especial que crea o unicializa un objeto, es
-la versión de JavaScript de una clase. En JavaScript, se llama a un constructor
-cuando se crea un objeto usando la new palabra clave.</p>
-<p>En otras palabras, el operador new utilizado junto a una función de JavaScript es
-lo que nos permite obtener un objeto constructor o función
-constructora.</p>
+      <h2 id="contenido-cool-en-construcción"><em>⚠️Contenido cool en construcción&hellip;</em></h2>
+<p>📦 La forma más simple de crear objetos en Vanilla JavaScript (JS) es usando la forma literal pero no está de más mencionar que la creación de objetos en Programación Orientada a Objetos (POO), JS lo hace a su estilo. Y muy rapidamente te darás cuenta en este post y próximos a lo que me refiero cuando digo que &ldquo;a su estilo&rdquo; y sera aun más obvio si ya has implementado ese paradigma en otros lenguajes como Python, PHP o Java.</p>
+<p>Cuando se trata POO, JS utiliza algo llamado funciones constructoras para la creación de objetos. Sí, no hay clases tradicionales, pero existe algo llamado syntactic sugar para poder crear clases utilizando la palabra clave <code>class</code>. Así que tranqui porque todo eso lo  veremos en próximos posts.</p>
+<h2 id="lets-fucking-go">🚀LET´S FUCKING GO!!</h2>
+<p>Entonces, que vamos a aprender en este epico post? Veremos las diferentes sintaxis para construir objetos al estilo Vanilla JS. Y estás son:</p>
+<ul>
+<li>Objetos literales (literal objects)</li>
+<li>Object</li>
+<li>Object.create()</li>
+<li>Funciones constructoras</li>
+<li>Clases (class syntactic sugar)</li>
+</ul>
+<h2 id="creación-de-objetos-usando-la-forma-literal">Creación de objetos usando la forma literal</h2>
 <h2 id="creación-de-objetos-vacios-usando-el-constructor-object">Creación de objetos vacios usando el constructor Object()</h2>
 <p>new Object() crea un objeto vacío, un envoltorio.</p>
 <h3 id="cración-del-objeto">Cración del objeto</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="kd">let</span> <span class="nx">ninjaItachi</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">ninjaItachi</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
 </code></pre></div><h3 id="agregando-propiedades-al-objeto-vacío">Agregando propiedades al objeto vacío.</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Itachi Uchiha&#39;</span><span class="p">;</span>
 <span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">clan</span> <span class="o">=</span> <span class="s1">&#39;Uchiha&#39;</span><span class="p">;</span>
@@ -112,8 +114,7 @@ constructora.</p>
 <span class="p">}</span>
 <span class="kr">const</span> <span class="nx">naruto</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ninjaNaruto</span><span class="p">()</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">naruto</span><span class="p">.</span><span class="nx">info</span><span class="p">())</span>
-</code></pre></div><h2 id="creación-de-objetos-usando-la-forma-literal">Creación de objetos usando la forma literal</h2>
-
+</code></pre></div>
     </div>
   </div>
 
