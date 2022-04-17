@@ -2,7 +2,7 @@
 title: "Cómo instalar Hugo en Windows"
 date: 2022-04-08
 description: 'Quieres aprender a instalar Hugo? este es tu post👊🤠.'
-image: images/launchx.png
+image: ''
 draft: false
 ---
 
