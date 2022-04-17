@@ -83,7 +83,7 @@ var soyUnTexto = new String('Bob')
 var soyUnNumero = new Number(25);
 var soyUnBooleano = new Boolean(true);
 ``` 
-y de todos ellos el unico que nos interesa, obviamente, es **new Object()** cosntructor. El contructor **Object** crea un objeto vacío, un envoltorio. El sig. ejemplo almacena un objeto vacío **Object** en *itachi*.
+Y de todos ellos el único que nos interesa, obviamente, es **new Object()** constructor. El constructor **Object** crea un objeto vacío, un envoltorio. El sig. Ejemplo, almacena un objeto vacío **Object** en *itachi*.
 ### Cración del objeto
 ```javascript
 let itachi = new Object();
@@ -104,15 +104,15 @@ console.log(itachi.info()) // Output: 'Nombre del shinobbi: Itachi Uchiha'
 
 ## Creación de objetos usando una función constructura
 
-Una función constructora podriamos decir que es la forma que JS tiene para representar **clases** y luego apartir de ellas crear objetos usando el **operador new**.  
+Una función constructora podríamos decir que es la forma que JS tiene para representar **clases** y luego a partir de dicha función crear objetos usando el **operador new**.  
 ```JS
 function Ninja() { } //  Función constructora.
 const naruto = new Ninja()
 console.log(naruto) // Output: Ninja {}
 ``` 
-Y sí, a simple vista pareciera que estamos tratando con una función nombrada de toda la vida pero la clave esta cuando mandamos a llamar a dicha función usando la palabra clave ```new```. En el momento que nosotros ponemos el operado **new** antes de la invocación de dicha función se vuelve una función constructora que nos permite crear o instanciar nuevos objetos.
+Y sí, a simple vista pareciera que estamos tratando con una función nombrada de toda la vida, pero la clave esta cuando mandamos a llamar a dicha función usando la palabra clave ```new```. En el momento que nosotros ponemos el operado **new** antes de la invocación de dicha función se vuelve una función constructora que nos permite crear o instanciar nuevos objetos.
 
-> ⚡Tip: Una buena práctica es que siempre que quieras implementar una función constructora para crear objetos, el nombre de dicha función simpre debe iniciar con mayúculas.
+> ⚡Tip: Una buena práctica es que siempre que quieras implementar una función constructora para crear objetos, el nombre de dicha función siempre debe iniciar con mayúsculas.
 ```js 
     // ❌ Bad 
     function ninja( ) { ... }
