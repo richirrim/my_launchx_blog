@@ -60,28 +60,29 @@
     </div>
     <div class="content">
       <h2 id="contenido-cool-en-construcción"><em>⚠️Contenido cool en construcción&hellip;</em></h2>
-<p>📦 La forma más simple de crear objetos en Vanilla JavaScript (JS) es usando la forma literal pero no está de más mencionar que la creación de objetos en Programación Orientada a Objetos (POO), JS lo hace a su estilo. Y muy rapidamente te darás cuenta en este post y próximos a lo que me refiero cuando digo que &ldquo;a su estilo&rdquo; y sera aun más obvio si ya has implementado ese paradigma en otros lenguajes como Python, PHP o Java.</p>
-<p>Cuando se trata POO, JS utiliza algo llamado funciones constructoras para la creación de objetos. Sí, no hay clases tradicionales, pero existe algo llamado syntactic sugar para poder crear clases utilizando la palabra clave <code>class</code>. Así que tranqui porque todo eso lo  veremos en próximos posts.</p>
+<p>📦 La forma más simple de crear objetos en Vanilla JavaScript (JS) es utilizando la <strong>forma literal
+&ldquo;object = {&hellip;}&quot;</strong>. Ahora, no está de más mencionar que en Programación Orientada a Objetos (POO) la creación de clases, objetos, etc., JS lo hace a su estilo. Y muy rapidamente te darás cuenta a lo que me refiero cuando digo que &ldquo;a su estilo&rdquo;, si continuas en este post y claro sera aun más obvio si ya has implementado ese paradigma en otros lenguajes como Python, PHP o Java.</p>
+<p>Cuando se trata de POO, JS utiliza algo llamado funciones constructoras para la creación de objetos. Sí, no hay clases tradicionales pero <strong>apartir de ES6</strong> se nos ofrece una forma usando la palabra reseverda <strong>class</strong> pero no es más que syntactic sugar.</p>
 <h2 id="lets-fucking-go">🚀LET´S FUCKING GO!!</h2>
 <p>Entonces, que vamos a aprender en este epico post? Veremos las diferentes sintaxis para construir objetos al estilo Vanilla JS. Y estás son:</p>
 <ul>
-<li>⚡Objetos literales (literal objects)</li>
-<li>⚡Object</li>
-<li>⚡Object.create()</li>
-<li>⚡Funciones constructoras</li>
-<li>⚡Clases (class syntactic sugar)</li>
+<li>⚡Objetos literales | <strong>object = { &hellip; }</strong></li>
+<li>⚡ El constructor Object | <strong>new Object( )</strong></li>
+<li>⚡ Método estático create | <strong>Object.create()</strong></li>
+<li>⚡Funciones constructoras | <strong>function Person( ) { &hellip; }</strong></li>
+<li>⚡Clases (syntactic sugar) | <strong>class Person( ) { &hellip; }</strong></li>
 </ul>
 <h2 id="creación-de-objetos-usando-la-forma-literal">Creación de objetos usando la forma literal</h2>
-<p>Dentro de esta lista de como  crear objetos de diferentes formas, los <strong>objetos literales</strong> son los más fáciles, rápidos de construir y usar. Y antes de continuar, creo que no está de más explicar lo que significa eso de <strong>literal</strong>, además de ser un <strong>mecanismo que no todos los lenguajes poseen</strong>.</p>
+<p>Como se menciono al inicio del post, los <strong>objetos literales</strong> son una forma poco común y facil de crear objetos pero, pero antes de continuar creo que no está de más explicar lo que significa eso de <strong>literal</strong>.</p>
 <h3 id="literales">Literales</h3>
-<p>Los literales no son más que valores que tú vas a almacenar en las  variables que creas y tú sabes de lo que hablo porque si ya llegaste hasta esta parte de los objetos significa que has tenido un largo recorrido por el mundo de JS y ya has creado muchas variables a las que seguramente ya le has asignado valores como numbers, strings, booleanos, etc.</p>
+<p>Los literales son esos valores que sueles almacenar en variables que tu mismo creas y tú sabes de lo que hablo porque si estás aquí significa que ya has recorrido un largo camino hacia el mundo de JS y ya has creado muchas variables a las que seguramente ya le has asignado valores como numbers, strings, booleanos, etc.</p>
 <p>Así que, sí, Plebe, esos son los valores literales, pero veamos unos ejemplos rápidos.</p>
 <h4 id="literales-de-tipo-cadena-string">Literales de tipo cadena (string)</h4>
 <p>Un literal de tipo string es una cadena de caracteres, un texto, que está entre de comillas.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">kindOfEyes</span> <span class="o">=</span> <span class="s1">&#39;mangekyou sharingan&#39;</span> <span class="c1">// con comillas simples o
 </span><span class="c1"></span><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;Itachi&#34;</span> <span class="c1">// con comillas dobles.
 </span></code></pre></div><h4 id="literales-de-tipo-número-number">Literales de tipo número (number)</h4>
-<p>Un literal de tipo número se pueden expresar: En decimales (base 10), Hexadecimales (base 16), Octales (base 8) y Binarios (base 2).</p>
+<p>Un literal de tipo número, son números que puedes expresar: En decimales (base 10), Hexadecimales (base 16), Octales (base 8) y Binarios (base 2).</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">26</span> 
 <span class="kr">const</span> <span class="nx">Pisito</span> <span class="o">=</span> <span class="mf">3.1416</span>
 </code></pre></div><h4 id="literales-de-tipo-boleanos-boolean">Literales de tipo Boleanos (boolean)</h4>
@@ -89,7 +90,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">isActivate</span> <span class="o">=</span> <span class="kc">true</span> 
 <span class="kr">const</span> <span class="nx">canFly</span> <span class="o">=</span> <span class="kc">false</span>
 </code></pre></div><h4 id="literales-de-tipo-objeto-object">Literales de tipo Objeto (object)</h4>
-<p>Ahora, sí, veamos que es un objeto literal, se podría resumir en que es una lista para agrupar información que contiene elementos <strong>par clave-valor</strong> encerrados entre corchetes <strong>{ &hellip; }</strong>.</p>
+<p>Ahora, sí, veamos que es un objeto literal. Se podría resumir en que es una lista para agrupar información. Un objeto literal esta formado por elementos <strong>par clave-valor</strong> encerrados entre llaves <strong>{ &hellip; }</strong>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">ninja</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Obito&#39;</span><span class="p">,</span> <span class="c1">// Elmento par clave: valor
 </span><span class="c1"></span>    <span class="nx">lastname</span><span class="o">:</span> <span class="s1">&#39;Uchiha&#39;</span><span class="p">,</span> <span class="c1">// o propiedad par clave: valor.
@@ -104,48 +105,42 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><p>El término “literal” uno de sus significados es “Que reproduce exactamente lo que se ha dicho o se ha escrito “.</p>
-<h2 id="creación-de-objetos-vacios-usando-el-constructor-object">Creación de objetos vacios usando el constructor Object()</h2>
-<p>new Object() crea un objeto vacío, un envoltorio.</p>
+<h2 id="creación-de-objetos-vacios-usando-el-constructor-object">Creación de objetos vacios usando el constructor Object</h2>
+<p>Antes de ir directo al grano es importante mencionar que JavaScript tiene algunos constructores incorporados, incluidos los siguientes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">soyUnObjetoVacio</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span> 
+<span class="kd">var</span> <span class="nx">soyUnTexto</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">soyUnNumero</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Number</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">soyUnBooleano</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</code></pre></div><p>y de todos ellos el unico que nos interesa, obviamente, es <strong>new Object()</strong> cosntructor. El contructor <strong>Object</strong> crea un objeto vacío, un envoltorio. El sig. ejemplo almacena un objeto vacío <strong>Object</strong> en <em>itachi</em>.</p>
 <h3 id="cración-del-objeto">Cración del objeto</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">ninjaItachi</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
-</code></pre></div><h3 id="agregando-propiedades-al-objeto-vacío">Agregando propiedades al objeto vacío.</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Itachi Uchiha&#39;</span><span class="p">;</span>
-<span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">clan</span> <span class="o">=</span> <span class="s1">&#39;Uchiha&#39;</span><span class="p">;</span>
-<span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">currentAge</span> <span class="o">=</span> <span class="mi">21</span><span class="p">;</span>
-<span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">isAlive</span> <span class="o">=</span> <span class="kc">false</span>
-<span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">skillsUnique</span> <span class="o">=</span> <span class="p">[]</span>
-</code></pre></div><h3 id="agregando-métodos">Agregando métodos</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">info</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="sb">`
-</span><span class="sb">        NINJA, </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span><span class="si">}</span><span class="sb">
-</span><span class="sb">        </span><span class="si">${</span><span class="s1">&#39;------&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="si">}</span><span class="sb">
-</span><span class="sb">        Clan: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">clan</span><span class="si">}</span><span class="sb">
-</span><span class="sb">        Edad Actual: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">currentAge</span><span class="si">}</span><span class="sb">
-</span><span class="sb">        Habilidades unicas: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">skillsUnique</span><span class="p">.</span><span class="nx">length</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">skillsUnique</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; | &#39;</span><span class="p">)</span> <span class="o">:</span> <span class="s1">&#39;Nope&#39;</span><span class="si">}</span><span class="sb">
-</span><span class="sb">    `</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">itachi</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">itachi</span><span class="p">)</span> <span class="c1">// Output: {}
+</span></code></pre></div><p>Ya si quieres agregarle propidades y métodos has lo sig.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="nx">itachi</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Itachi Uchiha&#39;</span><span class="p">;</span>
+<span class="nx">itachi</span><span class="p">.</span><span class="nx">info</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="sb">`Nombre del shinobbi: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span>
 <span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ninjaItachi</span><span class="p">.</span><span class="nx">info</span><span class="p">())</span>
-</code></pre></div><h2 id="creación-de-objetos-usando-una-función-constructura">Creación de objetos usando una función constructura</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="kd">function</span> <span class="nx">ninjaNaruto</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Naruto Uzumaki&#39;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">clan</span> <span class="o">=</span> <span class="s1">&#39;Uzumaki&#39;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">currentAge</span> <span class="o">=</span> <span class="s1">&#39;32&#39;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">isAlive</span> <span class="o">=</span> <span class="kc">true</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">skillsUnique</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Detección de sentimiento negativos&#39;</span><span class="p">,</span> <span class="s1">&#39;Flotar&#39;</span><span class="p">,</span> <span class="s1">&#39;Regeneración&#39;</span><span class="p">]</span>
 
-    <span class="k">this</span><span class="p">.</span><span class="nx">info</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-       
-        <span class="k">return</span> <span class="sb">`
-</span><span class="sb">            NINJA, </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span><span class="si">}</span><span class="sb">
-</span><span class="sb">            </span><span class="si">${</span><span class="s1">&#39;------&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="si">}</span><span class="sb">
-</span><span class="sb">            Clan: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">clan</span><span class="si">}</span><span class="sb">
-</span><span class="sb">            Edad Actual: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">currentAge</span><span class="si">}</span><span class="sb">
-</span><span class="sb">            Habilidades unicas: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">skillsUnique</span><span class="p">.</span><span class="nx">length</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">skillsUnique</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; | &#39;</span><span class="p">)</span> <span class="o">:</span> <span class="s1">&#39;Nope&#39;</span><span class="si">}</span><span class="sb">
-</span><span class="sb">        `</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="kr">const</span> <span class="nx">naruto</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ninjaNaruto</span><span class="p">()</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">naruto</span><span class="p">.</span><span class="nx">info</span><span class="p">())</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">itachi</span><span class="p">)</span> <span class="c1">// Output: { name: &#39;Itachi Uchiha&#39;, info: ƒ () }
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">itachi</span><span class="p">.</span><span class="nx">info</span><span class="p">())</span> <span class="c1">// Output: &#39;Nombre del shinobbi: Itachi Uchiha&#39;
+</span></code></pre></div><h2 id="creación-de-objetos-usando-una-función-constructura">Creación de objetos usando una función constructura</h2>
+<p>Una función constructora podriamos decir que es la forma que JS tiene para representar <strong>clases</strong> y luego apartir de ellas crear objetos usando el <strong>operador new</strong>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="kd">function</span> <span class="nx">Ninja</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span> <span class="c1">//  Función constructora.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">naruto</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Ninja</span><span class="p">()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">naruto</span><span class="p">)</span> <span class="c1">// Output: Ninja {}
+</span></code></pre></div><p>Y sí, a simple vista pareciera que estamos tratando con una función nombrada de toda la vida pero la clave esta cuando mandamos a llamar a dicha función usando la palabra clave <code>new</code>. En el momento que nosotros ponemos el operado <strong>new</strong> antes de la invocación de dicha función se vuelve una función constructora que nos permite crear o instanciar nuevos objetos.</p>
+<blockquote>
+<p>⚡Tip: Una buena práctica es que siempre que quieras implementar una función constructora para crear objetos, el nombre de dicha función simpre debe iniciar con mayúculas.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">    <span class="c1">// ❌ Bad 
+</span><span class="c1"></span>    <span class="kd">function</span> <span class="nx">ninja</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">person</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> 
+    <span class="kd">function</span> <span class="nx">car</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+    
+    <span class="c1">// ✔️Good
+</span><span class="c1"></span>    <span class="kd">function</span> <span class="nx">Ninja</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">Person</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> 
+    <span class="kd">function</span> <span class="nx">Car</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
 </code></pre></div>
     </div>
   </div>
