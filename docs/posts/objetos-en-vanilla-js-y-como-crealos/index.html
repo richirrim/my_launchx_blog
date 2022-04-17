@@ -65,13 +65,45 @@
 <h2 id="lets-fucking-go">🚀LET´S FUCKING GO!!</h2>
 <p>Entonces, que vamos a aprender en este epico post? Veremos las diferentes sintaxis para construir objetos al estilo Vanilla JS. Y estás son:</p>
 <ul>
-<li>Objetos literales (literal objects)</li>
-<li>Object</li>
-<li>Object.create()</li>
-<li>Funciones constructoras</li>
-<li>Clases (class syntactic sugar)</li>
+<li>⚡Objetos literales (literal objects)</li>
+<li>⚡Object</li>
+<li>⚡Object.create()</li>
+<li>⚡Funciones constructoras</li>
+<li>⚡Clases (class syntactic sugar)</li>
 </ul>
 <h2 id="creación-de-objetos-usando-la-forma-literal">Creación de objetos usando la forma literal</h2>
+<p>Dentro de esta lista de como  crear objetos de diferentes formas, los <strong>objetos literales</strong> son los más fáciles, rápidos de construir y usar. Y antes de continuar, creo que no está de más explicar lo que significa eso de <strong>literal</strong>, además de ser un <strong>mecanismo que no todos los lenguajes poseen</strong>.</p>
+<h3 id="literales">Literales</h3>
+<p>Los literales no son más que valores que tú vas a almacenar en las  variables que creas y tú sabes de lo que hablo porque si ya llegaste hasta esta parte de los objetos significa que has tenido un largo recorrido por el mundo de JS y ya has creado muchas variables a las que seguramente ya le has asignado valores como numbers, strings, booleanos, etc.</p>
+<p>Así que, sí, Plebe, esos son los valores literales, pero veamos unos ejemplos rápidos.</p>
+<h4 id="literales-de-tipo-cadena-string">Literales de tipo cadena (string)</h4>
+<p>Un literal de tipo string es una cadena de caracteres, un texto, que está entre de comillas.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">kindOfEyes</span> <span class="o">=</span> <span class="s1">&#39;mangekyou sharingan&#39;</span> <span class="c1">// con comillas simples o
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;Itachi&#34;</span> <span class="c1">// con comillas dobles.
+</span></code></pre></div><h4 id="literales-de-tipo-número-number">Literales de tipo número (number)</h4>
+<p>Un literal de tipo número se pueden expresar: En decimales (base 10), Hexadecimales (base 16), Octales (base 8) y Binarios (base 2).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">26</span> 
+<span class="kr">const</span> <span class="nx">Pisito</span> <span class="o">=</span> <span class="mf">3.1416</span>
+</code></pre></div><h4 id="literales-de-tipo-boleanos-boolean">Literales de tipo Boleanos (boolean)</h4>
+<p>Un literal de tipo boolean solo tiene dos tipos de valores <em>true</em> y <em>false</em>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">isActivate</span> <span class="o">=</span> <span class="kc">true</span> 
+<span class="kr">const</span> <span class="nx">canFly</span> <span class="o">=</span> <span class="kc">false</span>
+</code></pre></div><h4 id="literales-de-tipo-objeto-object">Literales de tipo Objeto (object)</h4>
+<p>Ahora, sí, veamos que es un objeto literal, se podría resumir en que es una lista para agrupar información que contiene elementos <strong>par clave-valor</strong> encerrados entre corchetes <strong>{ &hellip; }</strong>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">ninja</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Obito&#39;</span><span class="p">,</span> <span class="c1">// Elmento par clave: valor
+</span><span class="c1"></span>    <span class="nx">lastname</span><span class="o">:</span> <span class="s1">&#39;Uchiha&#39;</span><span class="p">,</span> <span class="c1">// o propiedad par clave: valor.
+</span><span class="c1"></span>    <span class="nx">kekkeiGenkai</span><span class="o">:</span> <span class="s1">&#39;sharingan&#39;</span><span class="p">,</span> <span class="c1">// par clave: valor
+</span><span class="c1"></span>    <span class="nx">age</span><span class="o">:</span> <span class="mi">31</span><span class="p">,</span> <span class="c1">// par clave: valor
+</span><span class="c1"></span>    <span class="nx">info</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// o métodos par clave: valor.
+</span><span class="c1"></span>        <span class="k">return</span> <span class="sb">`
+</span><span class="sb">            Nombre: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">lastname</span><span class="si">}</span><span class="sb">
+</span><span class="sb">            Kekkei Genkai: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">kekkeiGenkai</span><span class="si">}</span><span class="sb">
+</span><span class="sb">            Edad: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="si">}</span><span class="sb">
+</span><span class="sb">        `</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>El término “literal” uno de sus significados es “Que reproduce exactamente lo que se ha dicho o se ha escrito “.</p>
 <h2 id="creación-de-objetos-vacios-usando-el-constructor-object">Creación de objetos vacios usando el constructor Object()</h2>
 <p>new Object() crea un objeto vacío, un envoltorio.</p>
 <h3 id="cración-del-objeto">Cración del objeto</h3>
