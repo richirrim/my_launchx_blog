@@ -33,7 +33,7 @@ Tipos de módulos Hay 3 tipos de módulos.
       <pubDate>Sat, 09 Apr 2022 17:54:59 -0500</pubDate>
       
       <guid>https://richirrim.github.io/my_launchx_blog/posts/objetos-en-vanilla-js-y-como-crealos/</guid>
-      <description>⚠️Contenido cool en construcción&amp;hellip; 📦 La forma más simple de crear objetos en Vanilla JavaScript (JS) es utilizando la forma literal &amp;ldquo;object = {&amp;hellip;}&amp;quot;. Ahora, no está de más mencionar que en Programación Orientada a Objetos (POO) la creación de clases, objetos, etc., JS lo hace a su estilo. Y muy rapidamente te darás cuenta a lo que me refiero cuando digo que &amp;ldquo;a su estilo&amp;rdquo;, si continuas en este post y claro sera aun más obvio si ya has implementado ese paradigma en otros lenguajes como Python, PHP o Java.</description>
+      <description>📦 La forma más simple de crear objetos en Vanilla JavaScript (JS) es utilizando la forma literal &amp;ldquo;object = {&amp;hellip;}&amp;quot;. Ahora, no está de más mencionar que en Programación Orientada a Objetos (POO) la creación de clases, objetos, etc., JS lo hace a su estilo. Y muy rapidamente te darás cuenta a lo que me refiero cuando digo que &amp;ldquo;a su estilo&amp;rdquo;, si continuas en este post y claro sera aun más obvio si ya has implementado ese paradigma en otros lenguajes como Python, PHP o Java.</description>
     </item>
     
     <item>

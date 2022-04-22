@@ -59,20 +59,20 @@
       
     </div>
     <div class="content">
-      <h2 id="contenido-cool-en-construcción"><em>⚠️Contenido cool en construcción&hellip;</em></h2>
-<p>📦 La forma más simple de crear objetos en Vanilla JavaScript (JS) es utilizando la <strong>forma literal
+      <p>📦 La forma más simple de crear objetos en Vanilla JavaScript (JS) es utilizando la <strong>forma literal
 &ldquo;object = {&hellip;}&quot;</strong>. Ahora, no está de más mencionar que en Programación Orientada a Objetos (POO) la creación de clases, objetos, etc., JS lo hace a su estilo. Y muy rapidamente te darás cuenta a lo que me refiero cuando digo que &ldquo;a su estilo&rdquo;, si continuas en este post y claro sera aun más obvio si ya has implementado ese paradigma en otros lenguajes como Python, PHP o Java.</p>
 <p>Cuando se trata de POO, JS utiliza algo llamado funciones constructoras para la creación de objetos. Sí, no hay clases tradicionales pero <strong>apartir de ES6</strong> se nos ofrece una forma usando la palabra reseverda <strong>class</strong> pero no es más que syntactic sugar.</p>
-<h2 id="lets-fucking-go">🚀LET´S FUCKING GO!!</h2>
-<p>Entonces, que vamos a aprender en este epico post? Veremos las diferentes sintaxis para construir objetos al estilo Vanilla JS. Y estás son:</p>
+<p>Entonces, que vamos a aprender en este epico post? Veremos las diferentes formas para crear objetos al estilo Vanilla JS. Y estás son:</p>
 <ul>
 <li>⚡Objetos literales | <strong>object = { &hellip; }</strong></li>
-<li>⚡ El constructor Object | <strong>new Object( )</strong></li>
-<li>⚡ Método estático create | <strong>Object.create()</strong></li>
+<li>⚡El constructor Object | <strong>new Object( )</strong></li>
+<li>⚡Método estático create | <strong>Object.create()</strong></li>
 <li>⚡Funciones constructoras | <strong>function Person( ) { &hellip; }</strong></li>
 <li>⚡Clases (syntactic sugar) | <strong>class Person( ) { &hellip; }</strong></li>
 </ul>
-<h2 id="creación-de-objetos-usando-la-forma-literal">Creación de objetos usando la forma literal</h2>
+<p>Veamos cada uno, paso a paso y adetalle.</p>
+<p><img src="../../images/banner-js-go.png" alt="Imagen que dice, lets fucking go"></p>
+<h2 id="creación-de-objetos-usando-la-forma-literal">⚡Creación de objetos usando la <em>forma literal</em></h2>
 <p>Como se menciono al inicio del post, los <strong>objetos literales</strong> son una forma poco común y facil de crear objetos pero, pero antes de continuar creo que no está de más explicar lo que significa eso de <strong>literal</strong>.</p>
 <h3 id="literales">Literales</h3>
 <p>Los literales son esos valores que sueles almacenar en variables que tu mismo creas y tú sabes de lo que hablo porque si estás aquí significa que ya has recorrido un largo camino hacia el mundo de JS y ya has creado muchas variables a las que seguramente ya le has asignado valores como numbers, strings, booleanos, etc.</p>
@@ -105,7 +105,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><p>El término “literal” uno de sus significados es “Que reproduce exactamente lo que se ha dicho o se ha escrito “.</p>
-<h2 id="creación-de-objetos-vacios-usando-el-constructor-object">Creación de objetos vacios usando el constructor Object</h2>
+<h2 id="creación-de-objetos-vacios-usando-el-constructor-object">⚡Creación de objetos vacios usando el <em>constructor Object</em></h2>
 <p>Antes de ir directo al grano es importante mencionar que JavaScript tiene algunos constructores incorporados, incluidos los siguientes:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">soyUnObjetoVacio</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span> 
 <span class="kd">var</span> <span class="nx">soyUnTexto</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">)</span>
@@ -123,24 +123,92 @@
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">itachi</span><span class="p">)</span> <span class="c1">// Output: { name: &#39;Itachi Uchiha&#39;, info: ƒ () }
 </span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">itachi</span><span class="p">.</span><span class="nx">info</span><span class="p">())</span> <span class="c1">// Output: &#39;Nombre del shinobbi: Itachi Uchiha&#39;
-</span></code></pre></div><h2 id="creación-de-objetos-usando-una-función-constructura">Creación de objetos usando una función constructura</h2>
-<p>Una función constructora podríamos decir que es la forma que JS tiene para representar <strong>clases</strong> y luego a partir de dicha función crear objetos usando el <strong>operador new</strong>.  </p>
+</span></code></pre></div><h2 id="creación-de-objetos-usando-el-método-create">⚡Creación de objetos usando el método <em>.create()</em></h2>
+<p>Y sí, este es otro método, o mejor, otra forma de crear objetos en JS.
+Con este método puedes crear un objeto vacío al pasarle <em><strong>null</strong></em> al método
+<em><strong>.create(null)</strong></em>.</p>
+<p>Veamos como se hace👀:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="kr">const</span> <span class="nx">naruto</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">naruto</span><span class="p">)</span> <span class="c1">// Output: {}
+</span></code></pre></div><p>Como puedes ver el <em><strong>console.log</strong></em> te devuelve un par de corchetes, eso significa que hemos <strong>creado un nuevo
+objeto vacío</strong>, sin propiedades, sin su prototype, sin métodos, totalmente pelón.</p>
+<p>También es importante mencionar que podemos usar un objeto literal como prototipo de un nuevo objeto
+que creemos. Entonces, primero creamos el objeto literal primero:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="c1">// Objeto literal llamado itachi.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">itachi</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Itachi Uchiha&#39;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">21</span><span class="p">,</span>
+    <span class="nx">ninjaRank</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">rank</span><span class="o">:</span> <span class="s1">&#39;Ambu&#39;</span><span class="p">,</span>
+        <span class="nx">promotionToChunin</span><span class="o">:</span> <span class="s1">&#39;10 años&#39;</span>
+    <span class="p">},</span>
+    <span class="nx">getInfo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="sb">`
+</span><span class="sb">            NINJA, </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span><span class="si">}</span><span class="sb">
+</span><span class="sb">            </span><span class="si">${</span><span class="s1">&#39;----&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="si">}</span><span class="sb">
+</span><span class="sb">            Edad: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="si">}</span><span class="sb">
+</span><span class="sb">            Rango ninja: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">ninjaRank</span><span class="p">.</span><span class="nx">rank</span><span class="si">}</span><span class="sb">
+</span><span class="sb">            Ascenso a chūnin: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">ninjaRank</span><span class="p">.</span><span class="nx">promotionToChunin</span><span class="si">}</span><span class="sb">
+</span><span class="sb">        `</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>Ahora digamos que queremos crear un nuevo objeto llamado <em><strong>obito</strong></em> y que este contenga las mismas
+propiedades y métodos que el objeto <em><strong>itachi</strong></em>, pero con diferentes valores. Entonces, una vez
+creado el objeto literal <em><strong>itachi = { &hellip; }</strong></em> se lo pasaremos a nuestro método <em><strong>.create(itachi)</strong></em>
+como argumento porque como se mencionó será el prototipo del nuevo objeto.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">obito</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">itachi</span><span class="p">)</span>
+</code></pre></div><p>Y al hacer un <em><strong>console.log</strong></em> de <em><strong>obito</strong></em> podremos ver como se construyó este nuevo objeto. Y
+lo primero que observamos es que contiene una nueva propiedad llamada prototype, o <code>__proto__</code>, y
+como puedes ver contiene las mismas propiedades y métodos del objeto <strong>itachi</strong> como bien se mencionó.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obito</span><span class="p">)</span>
+<span class="cm">/* Output: {
+</span><span class="cm">  __proto__: { // Prototype o prototipo.
+</span><span class="cm">    name: &#39;Itachi Uchiha&#39;,
+</span><span class="cm">    age: 21,
+</span><span class="cm">    ninjaRank: { rank: &#39;Ambu&#39;, promotionToChunin: &#39;10 años&#39; },
+</span><span class="cm">    getInfo: ƒ getInfo()
+</span><span class="cm">  }
+</span><span class="cm">}
+</span><span class="cm">*/</span>
+</code></pre></div><p>Y para finalizar veamos como modificar dichos valores para que el método nos imprima información
+correcta sobre el objeto <em><strong>obito</strong></em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">obito</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Obito Uchiha&#39;</span>
+<span class="nx">obito</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">31</span>
+<span class="nx">obito</span><span class="p">.</span><span class="nx">ninjaRank</span><span class="p">.</span><span class="nx">rank</span> <span class="o">=</span> <span class="s1">&#39;Chunin&#39;</span>
+<span class="nx">obito</span><span class="p">.</span><span class="nx">ninjaRank</span><span class="p">.</span><span class="nx">promotionToChunin</span> <span class="o">=</span> <span class="s1">&#39;10 años&#39;</span>
+</code></pre></div><p>Ahora, para verificar que la info se modificó correctamente, invocaremos el método <em><strong>.getInfo()</strong></em> que
+el objeto <em><strong>obito</strong></em> heredo del objeto <em><strong>itachi</strong></em>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obito</span><span class="p">.</span><span class="nx">getInfo</span><span class="p">())</span>
+<span class="cm">/* Output:
+</span><span class="cm">NINJA, OBITO UCHIHA
+</span><span class="cm">----------------------------------------
+</span><span class="cm">Edad: 31
+</span><span class="cm">Rango ninja: Chunin
+</span><span class="cm">Ascenso a chūnin: 10 años
+</span><span class="cm">*/</span>
+</code></pre></div><h2 id="creación-de-objetos-usando-una-función-constructura">⚡Creación de objetos usando una <em>función constructura</em></h2>
+<p>Una función constructora podríamos decir que es la forma que JS tiene para representar <strong>clases</strong> y luego
+a partir de dicha función crear objetos usando el <strong>operador new</strong>.  </p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JS" data-lang="JS"><span class="kd">function</span> <span class="nx">Ninja</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span> <span class="c1">//  Función constructora.
 </span><span class="c1"></span><span class="kr">const</span> <span class="nx">naruto</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Ninja</span><span class="p">()</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">naruto</span><span class="p">)</span> <span class="c1">// Output: Ninja {}
 </span></code></pre></div><p>Y sí, a simple vista pareciera que estamos tratando con una función nombrada de toda la vida, pero la clave esta cuando mandamos a llamar a dicha función usando la palabra clave <code>new</code>. En el momento que nosotros ponemos el operado <strong>new</strong> antes de la invocación de dicha función se vuelve una función constructora que nos permite crear o instanciar nuevos objetos.</p>
+<h2 id="creación-de-objetos-usando-la-palabra-clave-class">⚡Creación de objetos usando la palabra clave <em>class</em></h2>
+<h4 id="contenido-cool-en-construcción"><em>⚠️Contenido cool en construcción&hellip;</em></h4>
 <blockquote>
-<p>⚡Tip: Una buena práctica es que siempre que quieras implementar una función constructora para crear objetos, el nombre de dicha función siempre debe iniciar con mayúsculas.</p>
+<p>⚡Tips para escribir mejor código al trabajar con objetos.</p>
 </blockquote>
+<h2 id="1-para-nombre-de-clases-usa-siempre-calmecase">1) ✔️Para nombre de clases usa siempre CalmeCase</h2>
+<p>Una buena práctica es que siempre que quieras implementar una función constructora para crear objetos, el nombre de dicha función siempre debe iniciar con mayúsculas.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">    <span class="c1">// ❌ Bad 
-</span><span class="c1"></span>    <span class="kd">function</span> <span class="nx">ninja</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
-    <span class="kd">function</span> <span class="nx">person</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> 
-    <span class="kd">function</span> <span class="nx">car</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</span><span class="c1"></span>    <span class="kd">function</span> <span class="nx">ninja</span> <span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">person</span> <span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> 
+    <span class="kd">function</span> <span class="nx">car</span> <span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
     
     <span class="c1">// ✔️Good
-</span><span class="c1"></span>    <span class="kd">function</span> <span class="nx">Ninja</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
-    <span class="kd">function</span> <span class="nx">Person</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> 
-    <span class="kd">function</span> <span class="nx">Car</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</span><span class="c1"></span>    <span class="kd">function</span> <span class="nx">Ninja</span> <span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">Person</span> <span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> 
+    <span class="kd">function</span> <span class="nx">Car</span> <span class="p">(</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
 </code></pre></div>
     </div>
   </div>
