@@ -2,28 +2,27 @@
 title: "Objetos en Vanilla Js y Cómo crealos"
 date: 2022-04-09T17:54:59-05:00
 description: 'Aprenderas las diferentes y retorcidas formas de crear objetos en JS.'
-image: ''
+image:
 draft: false
 ---
-## *⚠️Contenido cool en construcción...*
 
 📦 La forma más simple de crear objetos en Vanilla JavaScript (JS) es utilizando la **forma literal 
 "object = {...}"**. Ahora, no está de más mencionar que en Programación Orientada a Objetos (POO) la creación de clases, objetos, etc., JS lo hace a su estilo. Y muy rapidamente te darás cuenta a lo que me refiero cuando digo que "a su estilo", si continuas en este post y claro sera aun más obvio si ya has implementado ese paradigma en otros lenguajes como Python, PHP o Java.
  
 Cuando se trata de POO, JS utiliza algo llamado funciones constructoras para la creación de objetos. Sí, no hay clases tradicionales pero **apartir de ES6** se nos ofrece una forma usando la palabra reseverda **class** pero no es más que syntactic sugar.
 
-
-## 🚀LET´S FUCKING GO!!
-
-Entonces, que vamos a aprender en este epico post? Veremos las diferentes sintaxis para construir objetos al estilo Vanilla JS. Y estás son:
+Entonces, que vamos a aprender en este epico post? Veremos las diferentes formas para crear objetos al estilo Vanilla JS. Y estás son:
 
 - ⚡Objetos literales | **object = { ... }**
-- ⚡ El constructor Object | **new Object( )**
-- ⚡ Método estático create | **Object.create()**
+- ⚡El constructor Object | **new Object( )**
+- ⚡Método estático create | **Object.create()**
 - ⚡Funciones constructoras | **function Person( ) { ... }**
 - ⚡Clases (syntactic sugar) | **class Person( ) { ... }**
 
-## Creación de objetos usando la forma literal
+Veamos cada uno, paso a paso y adetalle.
+
+![Imagen que dice, lets fucking go](/images/banner-js-go.png)
+## ⚡Creación de objetos usando la *forma literal*
 
 Como se menciono al inicio del post, los **objetos literales** son una forma poco común y facil de crear objetos pero, pero antes de continuar creo que no está de más explicar lo que significa eso de **literal**.
 
@@ -74,7 +73,7 @@ const ninja = {
 ```
 
 El término “literal” uno de sus significados es “Que reproduce exactamente lo que se ha dicho o se ha escrito “.
-## Creación de objetos vacios usando el constructor Object
+## ⚡Creación de objetos vacios usando el *constructor Object*
 Antes de ir directo al grano es importante mencionar que JavaScript tiene algunos constructores incorporados, incluidos los siguientes:
 
 ```js
@@ -101,10 +100,100 @@ console.log(itachi) // Output: { name: 'Itachi Uchiha', info: ƒ () }
 console.log(itachi.info()) // Output: 'Nombre del shinobbi: Itachi Uchiha'
 ```
 
+## ⚡Creación de objetos usando el método *.create()*
 
-## Creación de objetos usando una función constructura
+Y sí, este es otro método, o mejor, otra forma de crear objetos en JS. 
+Con este método puedes crear un objeto vacío al pasarle ***null*** al método 
+***.create(null)***.
 
-Una función constructora podríamos decir que es la forma que JS tiene para representar **clases** y luego a partir de dicha función crear objetos usando el **operador new**.  
+Veamos como se hace👀:
+
+```JS
+const naruto = Object.create(null)
+console.log(naruto) // Output: {}
+``` 
+Como puedes ver el ***console.log*** te devuelve un par de corchetes, eso significa que hemos **creado un nuevo 
+objeto vacío**, sin propiedades, sin su prototype, sin métodos, totalmente pelón.
+
+También es importante mencionar que podemos usar un objeto literal como prototipo de un nuevo objeto 
+que creemos. Entonces, primero creamos el objeto literal primero:
+
+```JS
+// Objeto literal llamado itachi.
+const itachi = {
+    name: 'Itachi Uchiha',
+    age: 21,
+    ninjaRank: {
+        rank: 'Ambu',
+        promotionToChunin: '10 años'
+    },
+    getInfo() {
+        return `
+            NINJA, ${this.name.toUpperCase()}
+            ${'----'.repeat(10)}
+            Edad: ${this.age}
+            Rango ninja: ${this.ninjaRank.rank}
+            Ascenso a chūnin: ${this.ninjaRank.promotionToChunin}
+        `
+    }
+}
+```
+Ahora digamos que queremos crear un nuevo objeto llamado ***obito*** y que este contenga las mismas
+propiedades y métodos que el objeto ***itachi***, pero con diferentes valores. Entonces, una vez 
+creado el objeto literal ***itachi = { ... }*** se lo pasaremos a nuestro método ***.create(itachi)*** 
+como argumento porque como se mencionó será el prototipo del nuevo objeto.
+
+```js
+const obito = Object.create(itachi)
+```
+
+Y al hacer un ***console.log*** de ***obito*** podremos ver como se construyó este nuevo objeto. Y 
+lo primero que observamos es que contiene una nueva propiedad llamada prototype, o `__proto__`, y 
+como puedes ver contiene las mismas propiedades y métodos del objeto **itachi** como bien se mencionó.
+
+
+```js
+console.log(obito)
+/* Output: {
+  __proto__: { // Prototype o prototipo.
+    name: 'Itachi Uchiha',
+    age: 21,
+    ninjaRank: { rank: 'Ambu', promotionToChunin: '10 años' },
+    getInfo: ƒ getInfo()
+  }
+}
+*/
+```
+
+Y para finalizar veamos como modificar dichos valores para que el método nos imprima información 
+correcta sobre el objeto ***obito***
+
+```js
+obito.name = 'Obito Uchiha'
+obito.age = 31
+obito.ninjaRank.rank = 'Chunin'
+obito.ninjaRank.promotionToChunin = '10 años'
+``` 
+
+Ahora, para verificar que la info se modificó correctamente, invocaremos el método ***.getInfo()*** que 
+el objeto ***obito*** heredo del objeto ***itachi***.
+```js
+console.log(obito.getInfo())
+/* Output:
+NINJA, OBITO UCHIHA
+----------------------------------------
+Edad: 31
+Rango ninja: Chunin
+Ascenso a chūnin: 10 años
+*/
+```
+
+
+## ⚡Creación de objetos usando una *función constructura*
+
+Una función constructora podríamos decir que es la forma que JS tiene para representar **clases** y luego 
+a partir de dicha función crear objetos usando el **operador new**.  
+
 ```JS
 function Ninja() { } //  Función constructora.
 const naruto = new Ninja()
@@ -112,15 +201,22 @@ console.log(naruto) // Output: Ninja {}
 ``` 
 Y sí, a simple vista pareciera que estamos tratando con una función nombrada de toda la vida, pero la clave esta cuando mandamos a llamar a dicha función usando la palabra clave ```new```. En el momento que nosotros ponemos el operado **new** antes de la invocación de dicha función se vuelve una función constructora que nos permite crear o instanciar nuevos objetos.
 
-> ⚡Tip: Una buena práctica es que siempre que quieras implementar una función constructora para crear objetos, el nombre de dicha función siempre debe iniciar con mayúsculas.
+
+## ⚡Creación de objetos usando la palabra clave *class*
+#### *⚠️Contenido cool en construcción...*
+
+> ⚡Tips para escribir mejor código al trabajar con objetos.
+
+## 1) ✔️Para nombre de clases usa siempre CalmeCase
+Una buena práctica es que siempre que quieras implementar una función constructora para crear objetos, el nombre de dicha función siempre debe iniciar con mayúsculas.
 ```js 
     // ❌ Bad 
-    function ninja( ) { ... }
-    function person() { ... } 
-    function car( ) { ... }
+    function ninja ( ) { ... }
+    function person ( ) { ... } 
+    function car ( ) { ... }
     
     // ✔️Good
-    function Ninja( ) { ... }
-    function Person() { ... } 
-    function Car( ) { ... }
+    function Ninja ( ) { ... }
+    function Person ( ) { ... } 
+    function Car ( ) { ... }
 ```
